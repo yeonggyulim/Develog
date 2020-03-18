@@ -2038,6 +2038,12 @@ export type SiteFieldsEnum =
   'siteMetadata___title' |
   'siteMetadata___description' |
   'siteMetadata___author' |
+  'siteMetadata___introduction' |
+  'siteMetadata___siteUrl' |
+  'siteMetadata___social___github' |
+  'siteMetadata___social___facebook' |
+  'siteMetadata___social___instagram' |
+  'siteMetadata___icon' |
   'port' |
   'host' |
   'polyfill' |
@@ -2609,12 +2615,32 @@ export type SiteSiteMetadata = {
   title?: Maybe<Scalars['String']>,
   description?: Maybe<Scalars['String']>,
   author?: Maybe<Scalars['String']>,
+  introduction?: Maybe<Scalars['String']>,
+  siteUrl?: Maybe<Scalars['String']>,
+  social?: Maybe<SiteSiteMetadataSocial>,
+  icon?: Maybe<Scalars['String']>,
 };
 
 export type SiteSiteMetadataFilterInput = {
   title?: Maybe<StringQueryOperatorInput>,
   description?: Maybe<StringQueryOperatorInput>,
   author?: Maybe<StringQueryOperatorInput>,
+  introduction?: Maybe<StringQueryOperatorInput>,
+  siteUrl?: Maybe<StringQueryOperatorInput>,
+  social?: Maybe<SiteSiteMetadataSocialFilterInput>,
+  icon?: Maybe<StringQueryOperatorInput>,
+};
+
+export type SiteSiteMetadataSocial = {
+  github?: Maybe<Scalars['String']>,
+  facebook?: Maybe<Scalars['String']>,
+  instagram?: Maybe<Scalars['String']>,
+};
+
+export type SiteSiteMetadataSocialFilterInput = {
+  github?: Maybe<StringQueryOperatorInput>,
+  facebook?: Maybe<StringQueryOperatorInput>,
+  instagram?: Maybe<StringQueryOperatorInput>,
 };
 
 export type SiteSortInput = {
