@@ -3,7 +3,6 @@ import path from 'path';
 import { Query } from '../generated/graphql-types';
 
 export async function createPages({ actions, graphql }: CreatePagesArgs) {
-
     const { createPage } = actions;
     const blogPostTemplate = path.resolve(`src/templates/PostTemplate.tsx`);
 
